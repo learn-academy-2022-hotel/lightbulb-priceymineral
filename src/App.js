@@ -4,9 +4,16 @@ import LightSwitch from "./components/LightSwitch"
 
 const App = () => {
   const [lightSwitchStatus, setLightSwitchStatus] = useState("off")
+  const [lightBulbColor, setLightBulbColor] = useState("white")
 
   const handleClick = () => {
-    lightSwitchStatus === "off" ? setLightSwitchStatus("on") : setLightSwitchStatus("off")
+    if (lightSwitchStatus === "off") {
+      setLightSwitchStatus("on")
+      setLightBulbColor("yellow")
+    } else {
+      setLightSwitchStatus("off")
+      setLightBulbColor("white") 
+    }
   }
 
   return (
@@ -15,6 +22,7 @@ const App = () => {
       <LightSwitch 
       handleClick={handleClick} 
       lightSwitchStatus={lightSwitchStatus}
+      lightBulbColor={lightBulbColor}
       />
     </>
   )

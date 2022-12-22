@@ -6,8 +6,14 @@ const LightSwitch = (props) => {
       <button 
       type="button" 
       onClick={props.handleClick} 
-      className="lightbulb">
+      className="lightbulb"
+      style={{
+        backgroundColor:props.lightBulbColor
+      }}
+      >
+
       {props.lightSwitchStatus}
+
       </button>
     </>
   )
