@@ -5,10 +5,17 @@ import LightSwitch from "./components/LightSwitch"
 const App = () => {
   const [lightSwitchStatus, setLightSwitchStatus] = useState("off")
 
+  const handleClick = () => {
+    lightSwitchStatus === "off" ? setLightSwitchStatus("on") : setLightSwitchStatus("off")
+  }
+
   return (
     <>
       <h1>Lightbulb Challenge</h1>
-      <LightSwitch />
+      <LightSwitch 
+      handleClick={handleClick} 
+      lightSwitchStatus={lightSwitchStatus}
+      />
     </>
   )
 }

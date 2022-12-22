@@ -1,9 +1,14 @@
 import React from "react"
 
-const LightSwitch = () => {
+const LightSwitch = (props) => {
   return (
     <>
-      <div className="lightbulb">Off</div>
+      <button 
+      type="button" 
+      onClick={props.handleClick} 
+      className="lightbulb">
+      {props.lightSwitchStatus}
+      </button>
     </>
   )
 }

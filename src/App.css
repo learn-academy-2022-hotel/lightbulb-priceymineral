@@ -4,6 +4,7 @@ h1 {
 
 .lightbulb {
   border: 2px solid black;
+  background-color: white;
   width: 200px;
   height: 200px;
 }
