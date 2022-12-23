@@ -1,31 +1,28 @@
 import React, { useState } from "react"
+import switchOff from "../assets/switchOff.png"
+import switchOn from "../assets/switchOn.png"
 
 const LightSwitch = (props) => {
-  const [lightSwitchStatus, setLightSwitchStatus] = useState("off")
-  const [lightBulbColor, setLightBulbColor] = useState("white")
+  const [lightSwitchStatus, setLightSwitchStatus] = useState(switchOff)
 
   const handleClick = () => {
-    if (lightSwitchStatus === "off") {
-      setLightSwitchStatus("on")
-      setLightBulbColor("yellow")
+    if (lightSwitchStatus === switchOff) {
+      setLightSwitchStatus(switchOn)
     } else {
-      setLightSwitchStatus("off")
-      setLightBulbColor("white") 
+      setLightSwitchStatus(switchOff)
     }
   }
 
   return (
     <>
-      <button 
-      type="button" 
+      <div 
       onClick={handleClick} 
       className="lightbulb"
       style={{
-        backgroundColor:lightBulbColor
+        backgroundImage:`url(${lightSwitchStatus})` 
       }}
       >
-      {lightSwitchStatus}
-      </button>
+      </div>
     </>
   )
 }
