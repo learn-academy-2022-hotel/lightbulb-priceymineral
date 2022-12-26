@@ -20,19 +20,21 @@ const LightSwitch = (props) => {
 
   return (
     <>
-      <div 
-      onClick={handleClick} 
-      className="lightswitch"
-      style={{
-        backgroundImage:`url(${lightSwitchStatus})` 
-      }}
-      >
-      </div>
-      <div
-      className="lightbulb"
-      style={{
-        backgroundImage: `url(${lightBulbStatus})`
-      }}>
+      <div id="container">
+        <div 
+        onClick={handleClick} 
+        className="lightswitch"
+        style={{
+          backgroundImage:`url(${lightSwitchStatus})` 
+        }}
+        >
+        </div>
+        <div
+        className="lightbulb"
+        style={{
+          backgroundImage: `url(${lightBulbStatus})`
+        }}>
+        </div>
       </div>
     </>
   )

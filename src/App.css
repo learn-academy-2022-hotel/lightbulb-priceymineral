@@ -2,6 +2,11 @@ h1 {
   text-align: center;
 }
 
+#container{
+  display: flex;
+  justify-content: center;
+}
+
 .lightswitch {
   border: 2px solid black;
   background-color: white;
