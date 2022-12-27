@@ -6,9 +6,9 @@ const App = () => {
   return (
     <>
       <h1>Lightbulb Challenge</h1>
-      <LightSwitch />
-      <LightSwitch />
-      <LightSwitch />
+      <button>Let there be light</button>
+      <button>Let there be NO light</button>
+
     </>
   )
 }
