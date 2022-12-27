@@ -9,11 +9,20 @@ const App = () => {
     setSwitches([...switches, <LightSwitch />])
   }
 
+  const removeSwitch = () => {
+    switches.shift()
+    setSwitches([...switches])
+  }
+
   return (
     <>
       <h1>Lightbulb Challenge</h1>
-      <button onClick={addSwitch} >Let there be light</button>
-      <button>Let there be NO light</button>
+      <button onClick={addSwitch} >
+        Let there be light
+      </button>
+      <button onClick={removeSwitch} >
+        Let there be NO light
+      </button>
       {switches.map(s => {
         return s
       })}

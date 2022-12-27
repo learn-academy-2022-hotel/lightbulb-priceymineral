@@ -23,18 +23,18 @@ const LightSwitch = (props) => {
       
       <div id="container">
         <div 
-        onClick={handleClick} 
-        className="lightswitch"
-        style={{
-          backgroundImage:`url(${lightSwitchStatus})` 
-        }}
+          onClick={handleClick} 
+          className="lightswitch"
+          style={{
+            backgroundImage:`url(${lightSwitchStatus})` 
+          }}
         >
         </div>
         <div
-        className="lightbulb"
-        style={{
-          backgroundImage: `url(${lightBulbStatus})`
-        }}>
+          className="lightbulb"
+          style={{
+            backgroundImage: `url(${lightBulbStatus})`
+          }}>
         </div>
       </div>
     </>
